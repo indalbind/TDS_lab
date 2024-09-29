@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Rock, Paper, Scissors</h1>
+        <div class="icons">
+            <img id="rockIcon" src="https://img.icons8.com/color/96/000000/rock.png" alt="Rock" onclick="playGame('Rock')">
+            <img id="paperIcon" src="https://img.icons8.com/color/96/000000/paper.png" alt="Paper" onclick="playGame('Paper')">
+            <img id="scissorsIcon" src="https://img.icons8.com/color/96/000000/scissors.png" alt="Scissors" onclick="playGame('Scissors')">
+        </div>
+        
+        <div class="result">
+            <p>Player Choice: <span id="playerChoice">-</span></p>
+            <p>Computer Choice: <span id="computerChoice">-</span></p>
+            <p>Result: <span id="gameResult">-</span></p>
+        </div>
+        <div class="score">
+            <p>Player Score: <span id="playerScore">0</span></p>
+            <p>Computer Score: <span id="computerScore">0</span></p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #ff6347);
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+/* Game Icons */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.icons img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Change the cursor to pointer */
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Game Results */
+/* Game Results and Score */
+.result p, .score p {
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(235, 125, 29, 0.8), 0 0 20px rgba(235, 125, 29, 0.8); /* Neon text effect */
+    border: 2px solid cyan; /* Neon borders */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 20px rgb(110, 62, 231); /* Glowing effect */
+    width: 80%;
+}
+
+/* Score Styling */
+.score span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.winner {
+    color: #32cd32;
+    font-weight: bold;
+}
+
+.loser {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.draw {
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('/static/pointer.png'),auto ; /* Replace with your custom cursor URL */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+    }
+    
+    .icons img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+
+/* Fade out animation for the loss emoji */
+.fadeOut {
+    animation: fadeOut 3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Spin animation for the draw result */
+.spinAnimation {
+    animation: spin 3s ease-out forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
